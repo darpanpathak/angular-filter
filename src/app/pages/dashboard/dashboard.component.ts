@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app-service.service'
-import { News } from '../news';
-import { NameFilter } from '../name-filter.pipe';
+import { AppService } from '../../providers/app-service.service'
+import { News } from '../../models/news';
+import { NameFilter } from '../../pipes/name-filter.pipe';
 
 @Component({
   selector: 'app-dashboard',

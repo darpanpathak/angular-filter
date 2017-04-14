@@ -1,0 +1,18 @@
+<app-sitemenu></app-sitemenu>
+
+<div class="container" style="margin-top:20px;">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <a class="list-group-item clearfix" *ngIf="news">
+                <h3>{{news.title}}</h3>
+                <span class="btn btn-xs btn-info pull-right">Comments : {{news.num_comments}}</span>
+                <span><small><i class="fa fa-user"></i> </small> {{news.author}}</span><br>
+                <span>{{news.created_at}}</span>
+            </a>
+            <br>
+            <button class="btn btn-info" (click)="goBack()"> GO BACK</button>
+        </div>
+    </div>
+
+</div>

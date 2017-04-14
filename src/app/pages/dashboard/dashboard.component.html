@@ -1,0 +1,26 @@
+<app-sitemenu></app-sitemenu>
+
+<div class="container" style="margin-top:20px;">
+
+    <div class="row">
+        <div class="col-lg-8">
+            <input type="text" value="" class="form-control" placeholder="Search by Name" [(ngModel)]="title" />
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="list-group">
+                <a [routerLink]="['/newsdetails', news.id]" class="list-group-item clearfix" *ngFor="let news of newslist | nameFilter:title">
+                    <h3>{{news.title}}</h3>
+                    <span class="btn btn-xs btn-info pull-right">Comments : {{news.num_comments}}</span>
+                    <span><small><i class="fa fa-user"></i> </small> {{news.author}}</span><br>
+                    <span>{{news.created_at}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
